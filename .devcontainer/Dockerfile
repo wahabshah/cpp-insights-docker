@@ -1,6 +1,6 @@
 FROM andreasfertig/cppinsights-builder-gitpod:latest
 
-ARG REPO_ROOT=${TEST:-/workspace/cpp-insights-docker}
+ARG REPO_ROOT=${REPO_ROOT:-/workspace/cpp-insights-docker}
 
 RUN printenv
 RUN echo $TEST && echo $REPO_ROOT
