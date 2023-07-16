@@ -2,7 +2,7 @@ FROM andreasfertig/cppinsights-builder-gitpod:latest
 
 USER root
 RUN apt update                \
-    && apt -y install build-essentials cmake libboost-dev sudo strace nano
+    && apt -y install build-essential cmake libboost-dev sudo strace nano
 
 # ADD Gitpod user
 ARG REPO_ROOT=${GITPOD_REPO_ROOT}
