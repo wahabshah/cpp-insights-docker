@@ -6,3 +6,18 @@
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/wahabshah/cpp-insights-docker)
 
+
+* Test cpp insight
+```sh
+./build/insights test-cppinsights.cpp -- -std=c++17
+```
+* [godbolt link](https://godbolt.org/z/En53vYG74)
+* Compile
+    * Build via c++ :-
+    ```sh
+    /usr/bin/c++ echo-server-coroutine.cpp -g -std=c++2b -fcoroutines  -o echo-server-coroutine -lpthread
+    ```
+    * Build via insights :-
+    ```sh
+    ./build/insights --use-libc++ echo-server-coroutine.cpp -- -std=c++2b -lpthread
+    ```
