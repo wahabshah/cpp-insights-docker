@@ -2,12 +2,8 @@ FROM andreasfertig/cppinsights-builder-gitpod:latest
 
 ARG REPO_ROOT=${REPO_ROOT:-/workspace/cpp-insights-docker}
 
-RUN printenv
-RUN echo $TEST && echo $REPO_ROOT
-RUN exit -1
-
 USER root
-RUN apt update                \
+RUN apt update                                                             \
     && apt -y install build-essential cmake libboost-dev sudo strace nano
 
 ### Gitpod user ###
@@ -19,8 +15,6 @@ RUN # useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
     && mkdir /workspace && chown -hR gitpod:gitpod /workspace
 
 USER gitpod
-
-ARG c=${GITPOD_REPO_ROOT:-/workspaces/${RepositoryName}}
 RUN git clone https://github.com/andreasfertig/cppinsights.git   ${REPO_ROOT}/cppinsights                                                  \
     && mkdir -p ${REPO_ROOT}/build                                                                                                         \
     && cd ${REPO_ROOT}/build                                                                                                               \
