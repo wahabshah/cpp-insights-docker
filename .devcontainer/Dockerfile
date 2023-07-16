@@ -2,10 +2,11 @@ FROM andreasfertig/cppinsights-builder-gitpod:latest
 
 USER root
 RUN apt update                \
-    && apt -y install libboost-dev sudo strace
+    && apt -y install build-essentials cmake libboost-dev sudo strace nano
 
-RUN env
+# ADD Gitpod user
 ARG REPO_ROOT=${GITPOD_REPO_ROOT}
+
 RUN git clone https://github.com/andreasfertig/cppinsights.git   ${REPO_ROOT}/cppinsights                                                  \
     && mkdir -p ${REPO_ROOT}/build                                                                                                         \
     && cd ${REPO_ROOT}/build                                                                                                               \

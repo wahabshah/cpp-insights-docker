@@ -15,7 +15,7 @@
 * Compile
     * Build via c++ :-
     ```sh
-    /usr/bin/c++ echo-server-coroutine.cpp -g -std=c++2b -fcoroutines  -o echo-server-coroutine -lpthread
+    /usr/bin/c++ echo-server-coroutine.cpp -g -std=c++20 -fcoroutines  -o echo-server-coroutine -lpthread
     ```
     * Build via insights :-
     ```sh
