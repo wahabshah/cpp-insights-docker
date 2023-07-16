@@ -1,12 +1,3 @@
 image:
   file: .devcontainer/Dockerfile
   context: .devcontainer
-ports:
-  - name: VNC Server
-    description: VNC Server
-    port: 5900
-    onOpen: notify
-  - name: VNC Client
-    description: VNC Cleint
-    port: 6080
-    onOpen: notify
