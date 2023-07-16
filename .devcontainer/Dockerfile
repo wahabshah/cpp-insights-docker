@@ -1,5 +1,8 @@
 FROM andreasfertig/cppinsights-builder-gitpod:latest
 
+RUN env
+RUN exit -1
+
 USER root
 RUN apt update                \
     && apt -y install build-essential cmake libboost-dev sudo strace nano
