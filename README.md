@@ -6,18 +6,19 @@
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/wahabshah/cpp-insights-docker)
 
-
-* Test cpp insight
-```sh
-./build/insights test-cppinsights.cpp -- -std=c++17
-```
-* [godbolt link](https://godbolt.org/z/En53vYG74)
-* Compile
+* The goal of this repository is to test cpp-insights with asio library
+  * To check how the header only library is actually compiled in the background
+* Test cpp insight:-
+    ```sh
+    /usr/local/bin/insights test-cppinsights.cpp -- -std=c++17
+    ```
+* Compile boost asio program 
+    * [godbolt link](https://godbolt.org/z/vvhG6e31P)
     * Build via c++ :-
     ```sh
-    /usr/bin/c++ echo-server-coroutine.cpp -g -std=c++20 -fcoroutines  -o echo-server-coroutine -lpthread
+    /usr/bin/c++ echo-server-coroutine.cpp -g -std=c++20   -o echo-server-coroutine -lpthread
     ```
     * Build via insights :-
     ```sh
-    ./build/insights --use-libc++ echo-server-coroutine.cpp -- -std=c++2b -lpthread
+    /usr/local/bin/insights echo-server-coroutine.cpp -- -std=c++20 -lpthread
     ```
