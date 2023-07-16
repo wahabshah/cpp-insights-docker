@@ -1,5 +1,6 @@
 FROM andreasfertig/cppinsights-builder-gitpod:latest
 
+USER root
 RUN apt update \
     && apt install strace
 
