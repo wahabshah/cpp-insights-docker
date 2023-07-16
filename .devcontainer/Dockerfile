@@ -1,8 +1,8 @@
 FROM andreasfertig/cppinsights-builder-gitpod:latest
 
 USER root
-RUN apt update \
-    && apt install strace
+RUN apt update                \
+    && apt -y install libboost-dev strace
 
 #RUN git clone https://github.com/andreasfertig/cppinsights.git
 
