@@ -3,7 +3,7 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": { 
-			"REPO_ROOT" : "/workspaces/cpp-insights-docker"
+			"REPO_ROOT" : "/workspaces"
 				}
 	},
 
@@ -15,7 +15,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-vscode.cpptools",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.cpptools-extension-pack"
 			]
 		}
 	},

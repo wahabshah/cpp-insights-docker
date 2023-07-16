@@ -12,7 +12,7 @@
     ```sh
     /usr/local/bin/insights test-cppinsights.cpp -- -std=c++17
     ```
-* Compile boost asio program 
+* Compile boost asio program1
     * [godbolt link](https://godbolt.org/z/vvhG6e31P)
     * Build via c++ :-
        ```sh
@@ -21,4 +21,14 @@
     * Build via insights :-
        ```sh
        /usr/local/bin/insights echo-server-coroutine.cpp -- -std=c++20 -lpthread
+       ```
+* Compile boost asio program2 
+    * [godbolt link](https://godbolt.org/z/vvhG6e31P)
+    * Build via c++ :-
+       ```sh
+       /usr/bin/c++ echo-server-perthread.cpp -g -std=c++20   -o echo-server-perthread1 -lpthread
+       ```
+    * Build via insights :-
+       ```sh
+       /usr/local/bin/insights echo-server-perthread.cpp -- -std=c++20 -lpthread
        ```
