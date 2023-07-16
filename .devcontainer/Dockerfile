@@ -1,6 +1,9 @@
 FROM andreasfertig/cppinsights-builder-gitpod:latest
 
+ARG REPO_ROOT=${TEST:-/workspaces/cpp-insights-docker}
+
 RUN printenv
+RUN echo $TEST && echo $REPO_ROOT
 RUN exit -1
 
 USER root
@@ -17,7 +20,7 @@ RUN # useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod
 
 USER gitpod
 
-ARG REPO_ROOT=${GITPOD_REPO_ROOT:-/workspaces/${RepositoryName}}
+ARG c=${GITPOD_REPO_ROOT:-/workspaces/${RepositoryName}}
 RUN git clone https://github.com/andreasfertig/cppinsights.git   ${REPO_ROOT}/cppinsights                                                  \
     && mkdir -p ${REPO_ROOT}/build                                                                                                         \
     && cd ${REPO_ROOT}/build                                                                                                               \
