@@ -1,6 +1,6 @@
 FROM andreasfertig/cppinsights-builder-gitpod:latest
 
-RUN env
+RUN printenv
 RUN exit -1
 
 USER root
