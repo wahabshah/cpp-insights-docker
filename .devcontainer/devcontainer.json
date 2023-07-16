@@ -3,7 +3,7 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": { 
-			"TEST" : "/workspaces/cpp-insights-docker"
+			"REPO_ROOT" : "/workspaces/cpp-insights-docker"
 				}
 	},
 
