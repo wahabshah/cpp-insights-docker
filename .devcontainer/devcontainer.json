@@ -3,7 +3,7 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": { 
-			"TEST" : "hi"
+			"TEST" : "/workspaces/cpp-insights-docker"
 				}
 	},
 
